@@ -1,0 +1,181 @@
+/* ---------- paper foundation ---------- */
+:root {
+  --parchment: #f5f1e6;
+  --ink: #1a1a1a;
+  --burgundy: #8c2f2f;
+  --burgundy-dark: #6b1e1e;
+  --rule: #c0b9a8;
+  --radius: 0;
+  --shadow: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+  background: var(--parchment);
+  color: var(--ink);
+  line-height: 1.7;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='.04'/%3E%3C/svg%3E");
+}
+
+/* ---------- header ---------- */
+header {
+  border-bottom: 1px solid var(--rule);
+  padding: 2.5rem 0 1.5rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--burgundy);
+}
+
+nav {
+  margin-top: .8rem;
+  font-size: .95rem;
+}
+
+nav a {
+  color: var(--burgundy);
+  text-decoration: none;
+  margin: 0 .6rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- main column ---------- */
+main {
+  max-width: 680px;
+  margin: 2rem auto;
+  padding: 0 1.2rem;
+}
+
+/* ---------- search ---------- */
+.search-row {
+  display: flex;
+  border: 1px solid var(--rule);
+  background: #fffdf6;
+  overflow: hidden;
+}
+
+.search-row input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: .7rem 1rem;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  outline: none;
+  width: auto;
+  min-width: 0;
+}
+
+
+
+/* ---------- cards ---------- */
+.card {
+  background: #fffdf6;
+  border: 1px solid var(--rule);
+  padding: 1.4rem 1.8rem;
+  margin: 1.4rem 0;
+}
+
+.card strong {
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--burgundy);
+  letter-spacing: .5px;
+}
+
+/* ---------- word of the day ---------- */
+.wod {
+  border-top: 3px double var(--burgundy);
+  border-bottom: 3px double var(--burgundy);
+  text-align: center;
+  padding: 2rem;
+}
+
+.wod strong {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: .6rem;
+}
+
+/* ---------- forms ---------- */
+form input,
+form textarea,
+form button {
+  width: 100%;
+  padding: .6rem .8rem;
+  margin: .6rem 0;
+  border: 1px solid var(--rule);
+  background: #fffdf6;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  border-radius: var(--radius);
+}
+
+form button {
+  background: var(--burgundy);
+  color: #fff;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: var(--burgundy-dark);
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+/* ---------- links & small ---------- */
+a {
+  color: var(--burgundy);
+}
+
+.error {
+  color: #b00000;
+}
+
+.ok {
+  color: #2e7d32;
+}
+
+/* ---------- table (admin) ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.4rem;
+  border: 1px solid var(--rule);
+}
+
+th, td {
+  padding: .5rem .8rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+th {
+  background: rgba(140, 47, 47, .08);
+  font-weight: 600;
+}
+
+/* ---------- mobile ---------- */
+@media(max-width: 600px) {
+  header h1 {
+    font-size: 1.7rem;
+  }
+  main {
+    padding: 0 .8rem;
+  }
+}
